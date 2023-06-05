@@ -1,0 +1,19 @@
+# 外网用的生产环境配置文件，可根据需要自行修改
+# LiveKit-Server在外网使用，准备两个域名，一个用于LiveKit-Server，一个用于TURN中继。
+port: 7880
+log_level: info
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 60000
+  use_external_ip: true
+
+keys:
+  这里填自定义的api-key: 这里填自定义的api-secert,32位
+turn:
+  enabled: true
+  domain: 这里填绑定了服务器IP的第二个域名
+  tls_port: 443
+  cert_file: 这里填TLS证书地址
+  key_file: 这里填TLS证书密钥地址
+
