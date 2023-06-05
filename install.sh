@@ -71,7 +71,7 @@ then
 fi
 
 VERSION=$(get_latest_version)
-ARCHIVE_URL="https://github.com/livekit/$REPO/releases/download/v${VERSION}/${REPO}_${VERSION}_linux_${ARCH}.tar.gz"
+ARCHIVE_URL="https://hub.fgit.ml/livekit/$REPO/releases/download/v${VERSION}/${REPO}_${VERSION}_linux_${ARCH}.tar.gz"
 
 # Ensure version follows SemVer
 if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
