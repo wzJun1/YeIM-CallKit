@@ -6,7 +6,7 @@ rtc:
   tcp_port: 7881
   port_range_start: 50000
   port_range_end: 60000
-  use_external_ip: true
+  use_external_ip: false
 
 keys:
   这里填自定义的api-key: 这里填自定义的api-secert,32位
