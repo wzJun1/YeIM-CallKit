@@ -21,7 +21,7 @@ get_latest_version()
 {
   #latest_version=$(curl -s https://api.github.com/repos/livekit/$REPO/releases/latest | grep -oP '"tarball_url": ".*/tarball/v\K([^/]*)(?=")')
   #printf "%s" "$latest_version"
-  printf "v1.4.3"
+  printf "1.4.3"
 }
 
 # Ensure bash is used
