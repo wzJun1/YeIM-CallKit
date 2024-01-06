@@ -19,8 +19,9 @@ abort() {
 # i.e. 1.0.0
 get_latest_version()
 {
-  latest_version=$(curl -s https://api.github.com/repos/livekit/$REPO/releases/latest | grep -oP '"tarball_url": ".*/tarball/v\K([^/]*)(?=")')
-  printf "%s" "$latest_version"
+  #latest_version=$(curl -s https://api.github.com/repos/livekit/$REPO/releases/latest | grep -oP '"tarball_url": ".*/tarball/v\K([^/]*)(?=")')
+  #printf "%s" "$latest_version"
+  printf "v1.4.3"
 }
 
 # Ensure bash is used
@@ -71,7 +72,7 @@ then
 fi
 
 VERSION=$(get_latest_version)
-ARCHIVE_URL="https://hub.fgit.ml/livekit/$REPO/releases/download/v${VERSION}/${REPO}_${VERSION}_linux_${ARCH}.tar.gz"
+ARCHIVE_URL="https://hub.nuaa.cf/livekit/$REPO/releases/download/v${VERSION}/${REPO}_${VERSION}_linux_${ARCH}.tar.gz"
 
 # Ensure version follows SemVer
 if ! [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
